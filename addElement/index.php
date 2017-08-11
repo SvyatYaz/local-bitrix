@@ -1,14 +1,14 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Добавление элемента"); ?>
+ <link rel="stylesheet" type="text/css" href="style.css">
+    <div>
+    <form action="" method="post" enctype="multipart/form-data" id="valid">
 
 
-    <form action="" method="post" enctype="multipart/form-data">
-
-
-            <label for="user-name">Название<sup>*</sup></label>
-         <input type="text" name="name" value="">
-
+        <label for="name">Название<sup>*</sup></label>
+         <div><input type="text" name="name" value=""> </div>
+        <div class="error-box"></div>
         <p>Описание: <input type="text" name="description" value=""></p>
         <p>Город: <input type="text" name="city" value=""></p>
         <p>Дата: <input type="date" name="date" value=""></p>
@@ -17,6 +17,17 @@ $APPLICATION->SetTitle("Добавление элемента"); ?>
         <input type="reset" value="Очистить данные">
 
     </form>
+
+        <script src="scripts/jquery-3.2.1.min.js"></script>
+        <script src="scripts/jquery-validation/dist/jquery.validate.min.js"></script>
+        <script src="scripts/myscript.js"></script>
+
+
+    </div>
+
+
+
+
 
     <?php
 echo "<pre>";
